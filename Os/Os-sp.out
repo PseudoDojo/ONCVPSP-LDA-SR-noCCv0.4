@@ -1,0 +1,401 @@
+ONCVPSP  (Optimized Norm-Conservinng Vanderbilt PSeudopotential)
+scalar-relativistic version 3.3.0 06/-5/2017
+
+
+While it is not required under the terms of the GNU GPL, it is
+suggested that you cite D. R. Hamann, Phys. Rev. B 88, 085117 (2013)
+in any publication utilizing these pseudopotentials.
+
+
+# ATOM AND REFERENCE CONFIGURATION
+# atsym  z   nc   nv     iexc    psfile
+  Os 76.00   10    4       3      both
+#
+#   n    l    f        energy (Ha)
+    1    0    2.00    -2.7128297D+03
+    2    0    2.00    -4.7251061D+02
+    2    1    6.00    -4.1157114D+02
+    3    0    2.00    -1.0994415D+02
+    3    1    6.00    -9.2055060D+01
+    3    2   10.00    -7.2044098D+01
+    4    0    2.00    -2.3177258D+01
+    4    1    6.00    -1.7307955D+01
+    4    2   10.00    -1.0022634D+01
+    4    3   14.00    -1.9220618D+00
+    5    0    2.00    -3.3749470D+00
+    5    1    6.00    -1.8761597D+00
+    5    2    6.00    -2.3750560D-01
+    6    0    2.00    -2.3470836D-01
+#
+# PSEUDOPOTENTIAL AND OPTIMIZATION
+# lmax
+    3
+#
+#   l,   rc,      ep,       ncon, nbas, qcut
+    0   1.50000  -3.37495    4    8   8.20000
+    1   1.55000  -1.87616    4    8   8.40000
+    2   1.55000  -0.23751    4    8   8.40000
+    3   2.25000   0.50000    4    8   6.80000
+#
+# LOCAL POTENTIAL
+# lloc, lpopt,  rc(5),   dvloc0
+    4    5   1.50000      0.00000
+#
+# VANDERBILT-KLEINMAN-BYLANDER PROJECTORs
+# l, nproj, debl
+    0    2   3.14024
+    1    2   2.00000
+    2    2   1.50000
+    3    2   3.00000
+#
+# MODEL CORE CHARGE
+# icmod, fcfact, rcfact
+    0   0.00000   0.00000
+#
+# LOG DERIVATIVE ANALYSIS
+# epsh1, epsh2, depsh
+  -12.00   12.00    0.02
+#
+# OUTPUT GRID
+# rlmax, drl
+    6.00    0.01
+#
+# TEST CONFIGURATIONS
+# ncnf
+    0
+# nvcnf
+#   n    l    f
+
+
+Reference configufation results
+  iterations    27
+  all-electron total energy (Ha)   -1.72440236D+04
+
+Begin loop to  construct optimized pseudo wave functions
+and semi-local pseudopoentials for all angular momenta
+
+First projector wave function outermost peak radius =  0.906, l= 0
+
+All-electron projector functions [0,rc] norms and overlap, l= 0
+  qq(1,1)=  0.92604161  qq(1,2)= -0.12931310  qq(2,2)=  0.05206878
+
+
+Calculating first optimized projector for l=   0
+
+    Constraint consistency test
+      pswf0 val/der aewf val/der     diff
+        0.36829125    0.36829125    6.67D-13
+       -0.95303993   -0.95303993    7.22D-15
+        2.20513601    2.20513601    2.35D-14
+       -3.53963591   -3.53963591   -2.12D-13
+
+    Fraction of norm inside rc  0.926042
+    Optimizing pswf for qcut= 8.20 a_B^-1,  ecut=33.62 Ha
+    q_infinity defining residual KE= 23.04  (E_inf=  265.4 Ha)
+    Residual KE error=  5.98D-06 Ha   Old-New=  3.10D-09
+
+    Total kinetic energy consistency test
+      Fourier integration compared to d^2/dr^2 integral
+      Fourier  1.27675900  r-space=  1.27675916  ratio=  0.99999988
+    Potential consistency test at r_c
+      vpsp= -2.09095855  vae= -2.09103799  difference= -7.94D-05
+
+    Energy error per electron        Cutoff
+         Ha          eV             Ha
+         0.01000     0.27211       20.31
+         0.00100     0.02721       25.39
+         0.00010     0.00272       29.26
+         0.00001     0.00027       33.37
+
+Calculating second optimized projector for l=   0
+
+    Constraint consistency test
+      pswf0 val/der aewf val/der     diff
+        0.20554034    0.20554034   -6.16D-14
+        0.43192804    0.43192804   -5.50D-15
+       -1.33394197   -1.33394197    2.73D-14
+        2.01781603    2.01781603    1.13D-12
+       -0.12931310   -0.12931310   -1.11D-16
+
+    Fraction of norm inside rc  0.052069
+    Optimizing pswf for qcut= 8.20 a_B^-1,  ecut=33.62 Ha
+    q_infinity defining residual KE= 23.04  (E_inf=  265.4 Ha)
+    Residual KE error=  5.86D-06 Ha   Old-New=  5.36D-07
+
+    Total kinetic energy consistency test
+      Fourier integration compared to d^2/dr^2 integral
+      Fourier  0.47916956  r-space=  0.47916961  ratio=  0.99999989
+    Potential consistency test at r_c
+    "vpsp"= -2.09123109  vae= -2.09103799  difference=  1.93D-04
+
+    Energy error per electron        Cutoff
+         Ha          eV             Ha
+         0.01000     0.27211       16.86
+         0.00100     0.02721       23.63
+         0.00010     0.00272       28.62
+         0.00001     0.00027       33.00
+
+   Wellstate for l =  1  n =  6
+     eigenvalue =   0.1238
+     asymptotic potential =   0.7562
+     half-point radius =  4.4927
+
+First projector wave function outermost peak radius =  1.021, l= 1
+
+All-electron projector functions [0,rc] norms and overlap, l= 1
+  qq(1,1)=  0.83805499  qq(1,2)= -0.18712579  qq(2,2)=  0.05823233
+
+
+Calculating first optimized projector for l=   1
+
+    Constraint consistency test
+      pswf0 val/der aewf val/der     diff
+        0.45260581    0.45260581    1.53D-13
+       -0.88926785   -0.88926785    3.44D-14
+        1.44401763    1.44401763    5.84D-14
+       -0.67438720   -0.67438720    1.88D-12
+
+    Fraction of norm inside rc  0.838055
+    Optimizing pswf for qcut= 8.40 a_B^-1,  ecut=35.28 Ha
+    q_infinity defining residual KE= 24.38  (E_inf=  297.2 Ha)
+    Residual KE error=  7.28D-06 Ha   Old-New=  1.69D-09
+
+    Total kinetic energy consistency test
+      Fourier integration compared to d^2/dr^2 integral
+      Fourier  2.07304528  r-space=  2.07304511  ratio=  1.00000008
+    Potential consistency test at r_c
+      vpsp= -1.96468367  vae= -1.96477765  difference= -9.40D-05
+
+    Energy error per electron        Cutoff
+         Ha          eV             Ha
+         0.01000     0.27211       17.10
+         0.00100     0.02721       25.35
+         0.00010     0.00272       30.27
+         0.00001     0.00027       35.01
+
+Calculating second optimized projector for l=   1
+
+    Constraint consistency test
+      pswf0 val/der aewf val/der     diff
+        0.08280058    0.08280058   -3.64D-14
+        0.52612561    0.52612561    2.55D-15
+       -0.95586588   -0.95586588   -4.62D-14
+        0.37113817    0.37113817   -6.24D-13
+       -0.18712579   -0.18712579    2.78D-17
+
+    Fraction of norm inside rc  0.058232
+    Optimizing pswf for qcut= 8.40 a_B^-1,  ecut=35.28 Ha
+    q_infinity defining residual KE= 24.38  (E_inf=  297.2 Ha)
+    Residual KE error=  5.16D-06 Ha   Old-New=  5.18D-06
+
+    Total kinetic energy consistency test
+      Fourier integration compared to d^2/dr^2 integral
+      Fourier  0.70339721  r-space=  0.70339724  ratio=  0.99999995
+    Potential consistency test at r_c
+    "vpsp"= -1.96517251  vae= -1.96477765  difference=  3.95D-04
+
+    Energy error per electron        Cutoff
+         Ha          eV             Ha
+         0.01000     0.27211        8.55
+         0.00100     0.02721       22.44
+         0.00010     0.00272       29.14
+         0.00001     0.00027       34.06
+
+   Wellstate for l =  2  n =  6
+     eigenvalue =   1.2625
+     asymptotic potential =   2.1054
+     half-point radius =  3.2053
+
+First projector wave function outermost peak radius =  1.343, l= 2
+
+All-electron projector functions [0,rc] norms and overlap, l= 2
+  qq(1,1)=  0.43701109  qq(1,2)= -0.28160825  qq(2,2)=  0.19657935
+
+
+Calculating first optimized projector for l=   2
+
+    Constraint consistency test
+      pswf0 val/der aewf val/der     diff
+        0.50436977    0.50436977   -1.71D-13
+       -0.45815185   -0.45815185    1.78D-14
+        0.10825438    0.10825438   -2.42D-13
+        1.63357472    1.63357472   -1.82D-13
+
+    Fraction of norm inside rc  0.437011
+    Optimizing pswf for qcut= 8.40 a_B^-1,  ecut=35.28 Ha
+    q_infinity defining residual KE= 26.18  (E_inf=  342.7 Ha)
+    Residual KE error=  2.08D-06 Ha   Old-New=  3.55D-07
+
+    Total kinetic energy consistency test
+      Fourier integration compared to d^2/dr^2 integral
+      Fourier  1.95424302  r-space=  1.95424233  ratio=  1.00000035
+    Potential consistency test at r_c
+      vpsp= -1.96481545  vae= -1.96477765  difference=  3.78D-05
+
+    Energy error per electron        Cutoff
+         Ha          eV             Ha
+         0.01000     0.27211       12.78
+         0.00100     0.02721       16.49
+         0.00010     0.00272       19.69
+         0.00001     0.00027       29.29
+
+Calculating second optimized projector for l=   2
+
+    Constraint consistency test
+      pswf0 val/der aewf val/der     diff
+       -0.14080374   -0.14080374   -5.68D-13
+        0.82540624    0.82540624    6.66D-15
+       -0.50778865   -0.50778865    1.35D-13
+       -2.40352715   -2.40352715    4.00D-14
+       -0.28160825   -0.28160825   -2.22D-16
+
+    Fraction of norm inside rc  0.196579
+    Optimizing pswf for qcut= 8.40 a_B^-1,  ecut=35.28 Ha
+    q_infinity defining residual KE= 26.18  (E_inf=  342.7 Ha)
+    Residual KE error=  2.09D-06 Ha   Old-New=  1.18D-05
+
+    Total kinetic energy consistency test
+      Fourier integration compared to d^2/dr^2 integral
+      Fourier  1.87616732  r-space=  1.87616722  ratio=  1.00000005
+    Potential consistency test at r_c
+    "vpsp"= -1.96479495  vae= -1.96477765  difference=  1.73D-05
+
+    Energy error per electron        Cutoff
+         Ha          eV             Ha
+         0.01000     0.27211       13.52
+         0.00100     0.02721       17.30
+         0.00010     0.00272       20.38
+         0.00001     0.00027       30.27
+
+   Wellstate for l =  3  n =  5
+     eigenvalue =   0.5000
+     asymptotic potential =   1.0585
+     half-point radius =  5.5033
+
+   Wellstate for l =  3  n =  6
+     eigenvalue =   3.5000
+     asymptotic potential =   4.2311
+     half-point radius =  2.5942
+
+First projector wave function outermost peak radius =  3.615, l= 3
+
+All-electron projector functions [0,rc] norms and overlap, l= 3
+  qq(1,1)=  0.08031215  qq(1,2)= -0.05263945  qq(2,2)=  0.52251308
+
+
+Calculating first optimized projector for l=   3
+
+    Constraint consistency test
+      pswf0 val/der aewf val/der     diff
+        0.17418714    0.17418714    1.82D-13
+        0.03846727    0.03846727    6.25D-17
+       -0.05673436   -0.05673436   -1.90D-14
+       -0.01368314   -0.01368314    8.97D-14
+
+    Fraction of norm inside rc  0.080312
+    Optimizing pswf for qcut= 6.80 a_B^-1,  ecut=23.12 Ha
+    q_infinity defining residual KE= 20.00  (E_inf=  200.0 Ha)
+    Residual KE error=  1.08D-07 Ha   Old-New=  9.86D-09
+
+    Total kinetic energy consistency test
+      Fourier integration compared to d^2/dr^2 integral
+      Fourier  0.69897209  r-space=  0.69897208  ratio=  1.00000001
+    Potential consistency test at r_c
+      vpsp= -0.72945608  vae= -0.72941341  difference=  4.27D-05
+
+    Energy error per electron        Cutoff
+         Ha          eV             Ha
+         0.01000     0.27211        4.93
+         0.00100     0.02721       10.03
+         0.00010     0.00272       14.51
+         0.00001     0.00027       18.05
+
+Calculating second optimized projector for l=   3
+
+    Constraint consistency test
+      pswf0 val/der aewf val/der     diff
+        0.27238071    0.27238071    3.64D-13
+        0.41213571    0.41213571   -8.77D-15
+       -2.03328849   -2.03328849   -1.22D-13
+       -0.69116701   -0.69116701    4.11D-13
+       -0.05263945   -0.05263945    8.33D-17
+
+    Fraction of norm inside rc  0.522513
+    Optimizing pswf for qcut= 6.80 a_B^-1,  ecut=23.12 Ha
+    q_infinity defining residual KE= 20.00  (E_inf=  200.0 Ha)
+    Residual KE error=  1.80D-03 Ha   Old-New=  5.01D-04
+
+    Total kinetic energy consistency test
+      Fourier integration compared to d^2/dr^2 integral
+      Fourier  4.51043724  r-space=  4.51043765  ratio=  0.99999991
+    Potential consistency test at r_c
+    "vpsp"= -0.72989655  vae= -0.72941341  difference=  4.83D-04
+
+    Energy error per electron        Cutoff
+         Ha          eV             Ha
+         0.01000     0.27211       20.24
+         0.00100     0.02721       26.34
+         0.00010     0.00272       58.75
+
+Construct Vanderbilt / Kleinmman-Bylander projectors
+
+B matrix, ll=   0
+Hermiticity error    4.8878D-04
+
+  Orthonormal projector coefficients  7.9836E+00 -1.2508E+00
+
+B matrix, ll=   1
+Hermiticity error    2.7753D-04
+
+  Orthonormal projector coefficients  8.1926E+00  1.1461E+00
+
+B matrix, ll=   2
+Hermiticity error    2.1961D-04
+
+  Orthonormal projector coefficients  2.2256E+00  2.1814E-01
+
+B matrix, ll=   3
+Hermiticity error    1.1849D-04
+
+  Orthonormal projector coefficients  6.5567E-01  1.9443E-01
+
+Pseudoatom total energy  -91.565367
+
+
+Diagnostic tests using semi-local pseudopotentials
+
+   l    rcore       rmatch      e in        e test    norm test  slope test
+   0   1.5135154   2.4100544  -3.3749470  -3.3749462   1.0000475   1.0000134
+   1   1.5500577   2.4100544  -1.8761597  -1.8761662   1.0000007   0.9999866
+   2   1.5500577   2.4100544  -0.2375056  -0.2375042   0.9999972   1.0000086
+   3   2.2705145   2.4100544   0.5000000   0.5000079   1.0000025   1.0000025
+
+   0   1.5135154   2.4100544  -0.2347084  -0.2686491   0.9804523   0.7575723
+
+Diagnostic tests using Vanderbilt-Kleinman-Bylander pseudopotentials
+  1 or 2 projectors used as specified by nproj input data
+
+   l    rcore       rmatch      e in        e test    norm test  slope test
+   0   1.5135154   2.4100544  -3.3749470  -3.3749727   1.0004681   1.0004294
+   1   1.5500577   2.4100544  -1.8761597  -1.8761495   1.0001500   1.0001413
+   2   1.5500577   2.4100544  -0.2375056  -0.2375013   1.0000786   1.0000968
+   3   2.2705145   2.4100544   0.5000000   0.5000075   1.0000448   1.0000448
+
+
+   0   1.5135154   2.4100544  -0.2347084  -0.2347071   1.0000083   0.9998380
+   1   1.5500577   2.4100544   0.1238403   0.1238829   1.0001174   1.0001174
+   2   1.5500577   2.4100544   1.2624944   1.2625502   1.0001662   1.0001662
+   3   2.2705145   2.4100544   3.5000000   3.5000485   1.0001070   1.0001070
+
+ Testing for bound ghosts
+   n   l    E NL Schr. Eq   E Basis Diag.   E Cutoff
+
+   1   0       -3.374973       -3.374965     37.88
+   2   0       -0.234707       -0.160007     37.88
+
+   2   1       -1.876149       -1.876131     59.56
+
+   3   2       -0.237501       -0.228412     88.52
+
+
+run_ghosts: lschpsbar error, ierr=  60  progam will stop
